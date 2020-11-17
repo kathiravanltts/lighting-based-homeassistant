@@ -78,7 +78,6 @@ export default class Home extends Lightning.Component {
       this.txtIndex--;
       this.txtFocus();
     }else if (item.evt == 'enter') {
-      console.log("enter...");
       this.signal('select', { item: this.ipValue, evt:'enter' })
     }
   }

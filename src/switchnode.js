@@ -23,13 +23,10 @@ export default class Switchnode extends Lightning.Component {
         });
     }
     _focus() {
-        console.log("_fo")
         this.tag("Bg").patch({color: 0xff233aab});
       }
     _unfocus() {
-        console.log("_ufo")
         this.tag("Bg").patch({color: 0xff228B22});
-
     }
 
     update(state){

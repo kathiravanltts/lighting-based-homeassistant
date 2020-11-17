@@ -38,9 +38,7 @@ getValue(){
     }
 
     _captureKey(evt) {
-      console.log("evt:"+evt.key);
       if((evt.key>='0' && evt.key<='9')){
-        console.log("herer")
        let str = evt.key;
        let txt = ""+this.tag('Txt').__texture.text;
        this.value = txt+str;
@@ -59,10 +57,8 @@ getValue(){
         this.signal('select', { item: "", evt:'Backspace' })          
       }
       if(evt.key=='Enter'){
-        console.log('Textfiedl _handleEnter')
         this.signal('select', { item: "", evt:'enter' })        
       }
-      console.log("key doen");
       return true
     }
 

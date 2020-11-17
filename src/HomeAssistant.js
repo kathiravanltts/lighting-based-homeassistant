@@ -14,7 +14,6 @@ export default class HomeAssistant extends Lightning.Component {
         this.dataCount = Object.keys(this.argument.data).length;
 
         Object.keys(this.argument.data).sort().forEach(entId => {
-        console.log(entId+" "+this.argument.data[entId].state);   
         let toggleDisplay =false; 
         if (["switch", "light", "input_boolean"].includes(entId.split(".", 1)[0]) ){
             toggleDisplay = true;
@@ -47,10 +46,8 @@ export default class HomeAssistant extends Lightning.Component {
     }
 
     _handleEnter() {
-       console.log("_handleEnter.......");
         // if(this.children[this.index].argument.toggle){
         this.signal('select', { item: this.children[this.index].argument.endid})
-        console.log(this.children[this.index].argument.state);
         let state =this.children[this.index].argument.state=='on'?true:false;
         this.children[this.index].update(state);
         // }
